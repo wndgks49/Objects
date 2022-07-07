@@ -14,6 +14,6 @@ public class TicketSeller {
 
 
     public void sellTo(Audience audience){ // 객체 접근을 막고 메소드로 서로 알기만 해주기.
-        ticketOffice.plusAmount(audience.buy(ticketOffice.getTicket()));
+        ticketOffice.sellTo(audience);
     }
 }

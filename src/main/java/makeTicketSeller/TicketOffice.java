@@ -10,6 +10,10 @@ public class TicketOffice {
 
     private List<Ticket> tickets = new ArrayList<>();
 
+    public void sellTo(Audience audience){
+        plusAmount(audience.buy(getTicket()));
+    }
+
     public TicketOffice(long amount, Ticket ...tickets){
         this.amount = amount;
         this.tickets.addAll(Arrays.asList(tickets));
@@ -27,3 +31,4 @@ public class TicketOffice {
         this.amount += amount;
     }
 }
+
